@@ -1541,6 +1541,11 @@ dialog::backdrop,.modal-overlay{backdrop-filter:blur(4px)}
 #focusMode .ct button{border:0;border-radius:14px;padding:13px 22px;font-size:16px;font-weight:700;cursor:pointer;background:rgba(255,255,255,.16);color:#fff;transition:transform .15s,background .2s}
 #focusMode .ct button.p{background:linear-gradient(135deg,#ff7eb8,#e0559e)}#focusMode .ct button:hover{transform:translateY(-2px)}#focusMode .ct button:active{transform:scale(.95)}
 #focusMode .x{position:absolute;top:16px;right:18px;border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:50%;width:42px;height:42px;font-size:18px;cursor:pointer}
+/* Nombres completos: la tarjeta pasa a cuadrícula y el nombre puede ocupar varias líneas */
+.q-card{display:grid!important;grid-template-columns:auto auto minmax(0,1fr) auto;grid-template-areas:"h r i t" "h r a t";column-gap:11px;row-gap:8px;align-items:start}
+.q-card>.q-handle{grid-area:h;align-self:center}.q-card>.q-ring{grid-area:r;align-self:center}.q-card>.q-info{grid-area:i;min-width:0}.q-card>.q-actions{grid-area:a}.q-card>.q-tools{grid-area:t;align-self:center}
+.q-name{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere;line-height:1.3;font-size:13.5px}
+.q-meta{line-height:1.35}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.rv-ready .card,.rv-ready .kpi-card{opacity:1;transform:none}}
 @media print{#hud,#focusMode{display:none!important}.rv-ready .card{opacity:1!important;transform:none!important}}
 </style>
